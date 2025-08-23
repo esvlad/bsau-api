@@ -1,0 +1,13 @@
+{
+    "name": "esvlad/bsau-api",
+    "autoload": {
+        "psr-4": {
+            "Esvlad\\BsauApi\\": "app/"
+        }
+    },
+    "require": {
+        "illuminate/database": "^8.48",
+        "miladrahimi/phprouter": "5.*",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
