@@ -11,24 +11,79 @@ class Database {
 		$capsule->addConnection([
 		    "driver" => env('DBDRIVER'),
 		    "host" => env('DBHOST'),
-		    "database" => env('DBNAME'),
+		    "database" => 'old_bsau',
 		    "username" => env('DBUSER'),
 		    "password" => env('DBPASS'),
 		    "charset" => "utf8",
 		    "collation" => "utf8_unicode_ci",
-		    "prefix" => "",
+		    "prefix" => "b_",
 		], 'default');
 
 		$capsule->addConnection([
 		    "driver" => env('DBDRIVER'),
 		    "host" => env('DBHOST'),
-		    "database" => env('DB2NAME'),
-		    "username" => env('DB2USER'),
-		    "password" => env('DB2PASS'),
-		    "charset" => "utf8",
-		    "collation" => "utf8_unicode_ci",
+		    "database" => 'new_bsau',
+		    "username" => env('DBUSER'),
+		    "password" => env('DBPASS'),
+		    "charset" => "utf8mb4",
+		    "collation" => "utf8mb4_unicode_ci",
+		    "prefix" => "b_",
+		], 'new');
+
+		$capsule->addConnection([
+		    "driver" => env('DBDRIVER'),
+		    "host" => env('DBHOST'),
+		    "database" => 'diff_bsau',
+		    "username" => env('DBUSER'),
+		    "password" => env('DBPASS'),
+		    "charset" => "utf8mb4",
+		    "collation" => "utf8mb4_unicode_ci",
+		    "prefix" => "b_",
+		], 'diff');
+
+		$capsule->addConnection([
+		    "driver" => env('DBDRIVER'),
+		    "host" => env('DBHOST'),
+		    "database" => 'bsau',
+		    "username" => env('DBUSER'),
+		    "password" => env('DBPASS'),
+		    "charset" => "utf8mb4",
+		    "collation" => "utf8mb4_unicode_ci",
+		    "prefix" => "b_",
+		], 'bsau');
+
+		$capsule->addConnection([
+		    "driver" => env('DBDRIVER'),
+		    "host" => env('DBHOST'),
+		    "database" => 'bsau2',
+		    "username" => env('DBUSER'),
+		    "password" => env('DBPASS'),
+		    "charset" => "utf8mb4",
+		    "collation" => "utf8mb4_unicode_ci",
+		    "prefix" => "b_",
+		], 'bsau2');
+
+		$capsule->addConnection([
+		    "driver" => env('DBDRIVER'),
+		    "host" => env('DBHOST'),
+		    "database" => 'bsau3',
+		    "username" => env('DBUSER'),
+		    "password" => env('DBPASS'),
+		    "charset" => "utf8mb4",
+		    "collation" => "utf8mb4_unicode_ci",
+		    "prefix" => "b_",
+		], 'bsau3');
+
+		$capsule->addConnection([
+		    "driver" => env('DBDRIVER'),
+		    "host" => env('DBHOST'),
+		    "database" => 'ucsnema',
+		    "username" => env('DBUSER'),
+		    "password" => env('DBPASS'),
+		    "charset" => "utf8mb4",
+		    "collation" => "utf8mb4_unicode_ci",
 		    "prefix" => "",
-		], 'secondary');
+		], 'snema');
 
 		$capsule->setAsGlobal();
 		$capsule->bootEloquent();
